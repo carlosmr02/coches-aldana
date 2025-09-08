@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inventario de coches | Concesionario Aldana (Talavera y Toledo)</title>
+    <meta name="description" content="Inventario actualizado de coches nuevos y de ocasión en Talavera de la Reina, Toledo y alrededores. Filtra por marca, motor, año y precio." />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.coches-aldana.example/"},
+        {"@type":"ListItem","position":2,"name":"Inventario","item":"https://www.coches-aldana.example/inventario.html"}
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <header class="site-header container">
+      <a class="logo" href="/">
+        <img src="/assets/logo.svg" alt="Concesionario Aldana" width="140" height="32" />
+      </a>
+      <nav class="nav">
+        <a href="/inventario.html" aria-current="page">Inventario</a>
+        <a href="/servicios.html">Servicios</a>
+        <a href="/sobre-nosotros.html">Sobre nosotros</a>
+        <a href="/contacto.html" class="btn btn-primary">Contacto</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>Inventario</h1>
+      <div class="filters" role="region" aria-label="Filtros de inventario">
+        <select id="filter-brand" aria-label="Marca">
+          <option value="">Marca</option>
+        </select>
+        <select id="filter-engine" aria-label="Motor">
+          <option value="">Motor</option>
+        </select>
+        <select id="filter-year" aria-label="Año">
+          <option value="">Año</option>
+        </select>
+        <input id="filter-price" type="number" inputmode="numeric" placeholder="Precio máx (EUR)" aria-label="Precio máximo" />
+        <button id="filters-reset" class="btn">Limpiar</button>
+      </div>
+
+      <div id="inventory-grid" class="grid-cars" style="margin-top: 16px;"></div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container small">© <span id="year"></span> Concesionario Aldana</div>
+    </footer>
+
+    <script src="/assets/app.js" defer></script>
+  </body>
+  </html>
+
+
